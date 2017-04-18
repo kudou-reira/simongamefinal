@@ -1,0 +1,155 @@
+/*
+set variables for colors that you want used, saves from retyping hex values
+
+LESS lets you pass in "classes" as static values that can be reused
+*/
+
+@black: #071013;
+@blue: #6DEDE8;
+@red: #FF5454;
+@orange: #FFC45E;
+@green: #5DDD5F;
+
+body {
+  background-color: @black;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.simonGUI {
+  max-width: 480px;
+  margin: auto;
+}
+
+.blurb{
+  text-align: center;
+  width: 500px;
+  font-size: 21px;
+  margin-top: 0.5%;
+}
+
+.align {
+  /*
+flex is the  ability to alter dimensions to fill space
+  
+  flex  items can be stretched to us available space or to shrink to prevent overflow
+*/
+  display: flex;
+  justify-content: center;
+}
+
+
+/*
+topRow gets align class!
+*/
+
+.topRow {
+  .align;
+}
+
+.midRow {
+  display: flex;
+  /*
+  
+aligns the flexible container's items when the items don't use all the available space
+  
+  in this case, the green and red buttons are spaced evently thanks to this
+  
+  if justify-content were "center", the two buttons on the left and right would be squished in
+*/
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px auto;
+}
+
+.botRow {
+  .align;
+}
+
+@buttonWidth: 90px;
+
+/*
+  
+declare buttonwidth for both, makes a square
+
+*/
+
+.colorCircle {
+  width: @buttonWidth;
+  height: @buttonWidth;
+}
+
+
+/*
+  #IDs declared below, they pass in border-color, for example
+*/
+
+.border(@color) {
+  border: 4px solid @color;
+  margin: 20px;
+  &:active {
+    background-color: @color;
+  }
+}
+
+.onhover(@color) {
+  background-color: @color;
+}
+
+#blue {
+  .border(@blue);
+}
+
+#red {
+  .border(@red);
+}
+
+#orange {
+  .border(@orange);
+}
+
+#green {
+  .border(@green);
+}
+
+#blue.hover {
+  .onhover(@blue);
+}
+
+#red.hover {
+  .onhover(@red);
+}
+
+#orange.hover {
+  .onhover(@orange);
+}
+
+#green.hover {
+  .onhover(@green);
+}
+
+.singleBtnProps {
+  font-size: 2.7em;
+  text-align: left;
+  transition: 900ms;
+  width: 70px;
+  margin-right: 340px;
+  margin-top: 90px;
+  &:hover {
+    color: @blue;
+  }
+}
+
+.modal-title {
+  .black;
+}
+
+.black {
+  color: @black;
+  text-align: center;
+}
+
+#errorRedo {
+  margin: 5px auto;
+  text-align: center;
+}

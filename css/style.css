@@ -1,0 +1,139 @@
+/*
+set variables for colors that you want used, saves from retyping hex values
+
+LESS lets you pass in "classes" as static values that can be reused
+*/
+body {
+  background-color: #071013;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.simonGUI {
+  max-width: 480px;
+  margin: auto;
+}
+.blurb {
+  text-align: center;
+  width: 500px;
+  font-size: 21px;
+  margin-top: 0.5%;
+}
+.align {
+  /*
+flex is the  ability to alter dimensions to fill space
+  
+  flex  items can be stretched to us available space or to shrink to prevent overflow
+*/
+  display: flex;
+  justify-content: center;
+}
+/*
+topRow gets align class!
+*/
+.topRow {
+  /*
+flex is the  ability to alter dimensions to fill space
+  
+  flex  items can be stretched to us available space or to shrink to prevent overflow
+*/
+  display: flex;
+  justify-content: center;
+}
+.midRow {
+  display: flex;
+  /*
+  
+aligns the flexible container's items when the items don't use all the available space
+  
+  in this case, the green and red buttons are spaced evently thanks to this
+  
+  if justify-content were "center", the two buttons on the left and right would be squished in
+*/
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px auto;
+}
+.botRow {
+  /*
+flex is the  ability to alter dimensions to fill space
+  
+  flex  items can be stretched to us available space or to shrink to prevent overflow
+*/
+  display: flex;
+  justify-content: center;
+}
+/*
+  
+declare buttonwidth for both, makes a square
+
+*/
+.colorCircle {
+  width: 90px;
+  height: 90px;
+}
+/*
+  #IDs declared below, they pass in border-color, for example
+*/
+#blue {
+  border: 4px solid #6DEDE8;
+  margin: 20px;
+}
+#blue:active {
+  background-color: #6DEDE8;
+}
+#red {
+  border: 4px solid #FF5454;
+  margin: 20px;
+}
+#red:active {
+  background-color: #FF5454;
+}
+#orange {
+  border: 4px solid #FFC45E;
+  margin: 20px;
+}
+#orange:active {
+  background-color: #FFC45E;
+}
+#green {
+  border: 4px solid #5DDD5F;
+  margin: 20px;
+}
+#green:active {
+  background-color: #5DDD5F;
+}
+#blue.hover {
+  background-color: #6DEDE8;
+}
+#red.hover {
+  background-color: #FF5454;
+}
+#orange.hover {
+  background-color: #FFC45E;
+}
+#green.hover {
+  background-color: #5DDD5F;
+}
+.singleBtnProps {
+  font-size: 2.7em;
+  text-align: left;
+  transition: 900ms;
+  width: 70px;
+  margin-right: 340px;
+  margin-top: 90px;
+}
+.singleBtnProps:hover {
+  color: #6DEDE8;
+}
+.modal-title {
+  color: #071013;
+  text-align: center;
+}
+.black {
+  color: #071013;
+  text-align: center;
+}
+#errorRedo {
+  margin: 5px auto;
+  text-align: center;
+}
